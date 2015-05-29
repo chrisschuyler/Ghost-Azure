@@ -89,7 +89,7 @@
             "properties": {
                 "appSettings": [{
                     "name": "websiteUrl",
-                    "value": ""
+                    "value": "/blog"
                 }, {
                     "name": "emailService",
                     "value": "[parameters('Email Service')]"
@@ -104,6 +104,10 @@
                     "value": "[parameters('siteName')]"
                 }],
                  "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot"
+                    },
                     {
                         "virtualPath": "/blog",
                         "physicalPath": "site\\wwwroot\\blog"
