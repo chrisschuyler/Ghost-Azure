@@ -89,7 +89,10 @@
             "properties": {
                 "appSettings": [{
                     "name": "websiteUrl",
-                    "value": "/blog"
+                    "value": ""
+                }, {
+                    "name": "SCM_TARGET_PATH",
+                    "value": "blog"
                 }, {
                     "name": "emailService",
                     "value": "[parameters('Email Service')]"
