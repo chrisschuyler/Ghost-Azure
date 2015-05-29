@@ -80,7 +80,7 @@
             "serverFarm": "[parameters('hostingPlanName')]"
         },
         "resources": [{
-            "apiVersion": "2014-04-01",
+            "apiVersion": "2014-11-01",
             "type": "config",
             "name": "web",
             "dependsOn": [
@@ -102,7 +102,14 @@
                 }, {
                     "name": "siteName",
                     "value": "[parameters('siteName')]"
-                }]
+                }],
+                 "virtualApplications": [
+                    {
+                        "virtualPath": "/blog",
+                        "physicalPath": "site\\wwwroot\\blog"
+                    }
+                ]
+
             }
         }, {
             "apiVersion": "2014-04-01",
